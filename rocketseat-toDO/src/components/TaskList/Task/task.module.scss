@@ -1,0 +1,64 @@
+@use '../../../cssGlobal/_variables' as *;
+
+.wrapper{
+  padding: $escala-p;
+  background: $neutral-color-5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: $escala-p;
+
+  @media (max-width: 600px){
+    width: 90%;
+    margin: $escala-p auto;
+  }
+
+  .checkbox{
+    width: 20px;
+    height: 20px;
+    margin-inline: calc(10% - 40px);
+
+    background: transparent;
+    border-radius: 50%;
+    outline: 3px solid $primary-color-light;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+    @media (max-width: 600px){
+      margin-left: 5px;
+    }
+  }
+
+  .checked{
+    background: $primary-color-light;
+    border: 2px solid $neutral-color-5;
+  }
+
+  .task{
+    flex-grow: 1;
+    transition: 200ms;
+
+    @media (max-width: 600px){
+      margin-left: 20px;
+    }
+  }
+
+  .taskChecked{
+    text-decoration: line-through;
+    opacity: .4;
+  }
+
+  .deleteTask{
+    width: 10%;
+    transition: 200ms;
+    cursor: pointer;
+
+    &:hover, &:active, &:focus{
+      color: $danger;
+    }
+  }
+}

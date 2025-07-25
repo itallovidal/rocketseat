@@ -1,0 +1,71 @@
+@use '../../cssGlobal/_variables' as *;
+
+.wrapper{
+  display: flex;
+  position: relative;
+  transform: translateY(-50%);
+
+  @media (max-width: 600px){
+    justify-content: center;
+  }
+
+  .errorMsg{
+    position: absolute;
+    bottom: -$escala-p * 2;
+    color: $danger;
+    font-style: italic;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: showing-error 300ms forwards;
+  }
+
+  .inputStyle{
+    background: $neutral-color-5;
+    padding: $escala-p;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    color: white;
+    font-family: $fonte-1;
+
+    @media (max-width: 600px){
+      width: 50%;
+    }
+  }
+
+
+  .inputStyle::placeholder{
+    opacity: .4;
+    font-style: italic;
+  }
+
+  .btnStyle{
+    background: $primary-color-dark;
+    padding: $escala-p;
+    color: white;
+    margin-left: $escala-p;
+    flex-grow: 1;
+
+    @media (max-width: 600px){
+      width: 30%;
+      flex-grow: 0;
+    }
+
+    i{
+      margin-left: $escala-p;
+    }
+
+    &:hover{
+      background:   $primary-color-light  ;
+    }
+  }
+}
+
+@keyframes showing-error {
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

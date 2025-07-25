@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  position: relative;
+  transform: translateY(-50%);
+}
+@media (max-width: 600px) {
+  .wrapper {
+    justify-content: center;
+  }
+}
+.wrapper .errorMsg {
+  position: absolute;
+  bottom: -2rem;
+  color: #E25858;
+  font-style: italic;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: showing-error 300ms forwards;
+}
+.wrapper .inputStyle {
+  background: #262626;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 600px) {
+  .wrapper .inputStyle {
+    width: 50%;
+  }
+}
+.wrapper .inputStyle::placeholder {
+  opacity: 0.4;
+  font-style: italic;
+}
+.wrapper .btnStyle {
+  background: #1E6F9F;
+  padding: 1rem;
+  color: white;
+  margin-left: 1rem;
+  flex-grow: 1;
+}
+@media (max-width: 600px) {
+  .wrapper .btnStyle {
+    width: 30%;
+    flex-grow: 0;
+  }
+}
+.wrapper .btnStyle i {
+  margin-left: 1rem;
+}
+.wrapper .btnStyle:hover {
+  background: #4EA8DE;
+}
+
+@keyframes showing-error {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=form.module.css.map */
