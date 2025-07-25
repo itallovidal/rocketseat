@@ -1,0 +1,20 @@
+{
+  "transactions": [
+    {
+      "type": "outcome",
+      "price": 1200,
+      "description": "celular",
+      "category": "eletronicos",
+      "createdAt": "2024-07-13T00:45:16.353Z",
+      "id": 5
+    },
+    {
+      "type": "income",
+      "price": 3000,
+      "description": "app desenvolvido",
+      "category": "trabalho",
+      "createdAt": "2024-07-13T00:45:44.835Z",
+      "id": 6
+    }
+  ]
+}
